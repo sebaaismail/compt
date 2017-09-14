@@ -60,7 +60,7 @@ public class MyApp {
             String seperator = "(?<=\\D)(?=\\d)|(?<=\\d)(?=\\D)";
             String[] splitstrings = str.split(seperator);
             for (int i = 0; i < splitstrings.length; i++) {
-                //IsmPrintStream.logging(splitstrings[i]);
+                IsmPrintStream.logging(splitstrings[i]);
             }
             //split the last 10 characters from last
             str = splitstrings[1].substring(splitstrings[1].length() - 10);
@@ -69,28 +69,68 @@ public class MyApp {
 
         return number;
     }
+    static int extractFisrtNum(String str) {
+        int number = 0;
+        //str = "Ram-sita-laxman";
+        String seperator = "(?<=\\D)(?=\\d)|(?<=\\d)(?=\\D)";
+        String[] splitstrings = str.split(seperator);
+        seperator = "000";
+        String[] splitstrings2 = splitstrings[1].split(seperator);
 
-    static int parseFile(FileReader input) throws IOException {
+        str = splitstrings2[splitstrings2.length-2];
+        //split the last 10 characters from last
+        //str = splitstrings2[1].substring(splitstrings[1].length() - 10);
+        //int number = Integer.parseInt(splitstrings[splitstrings.length-1]);
+        number = Integer.parseInt(str);
+
+        return number;
+    }
+
+    static TheResult parseFile(FileReader input) throws IOException {
         BufferedReader bufRead = new BufferedReader(input);
         String myLine = null;
-        int i=0, somme=0;
+        int i = 0 , firstLineNum = 0, realSomme = 0;
+
+        TheResult result = new TheResult(0, false);
 
         while ( (myLine = bufRead.readLine()) != null)
         {
 
             if (i==0) {
+
+                firstLineNum = extractFisrtNum(myLine);
                 i++;
 
             } else {
                 if(myLine.length() > 0) {
                     //System.out.println("*****");
-                    somme += extractNum(myLine);
+                    realSomme += extractNum(myLine);
                     i++;
                     System.out.println("i = " + i + " # " + extractNum(myLine));
                 }
             }
         }
-        return somme;
+        result.firstnum = firstLineNum;
+        result.lasomme = realSomme;
+        result.validate();
+
+        return result;
+    }
+
+    protected static class TheResult{
+        int firstnum, lasomme = 0;
+        boolean isCorrect = false;
+        protected TheResult(int somme, boolean val){
+            this.lasomme = somme;
+            this.isCorrect = val;
+        }
+        protected void validate(){
+            if (this.firstnum == this.lasomme) {
+                this.isCorrect = true;
+            } else {
+                this.isCorrect = false;
+            }
+        }
     }
 
     public static void main(String[] args) {
@@ -106,7 +146,7 @@ public class MyApp {
         }
 
         IsmPrintStream.prepareLogFile();
-        IsmPrintStream.logging("Application calcul CD paye - commune de Boufatis");
+        IsmPrintStream.logging("Application calcul CD paye - Boufatis/ Sebaa.Ism©2017");
         int num = extractNum("*00000000000169961144000003523770YAYAOUI FATIMA             1");
         IsmPrintStream.logging("ok = " + num);
 
@@ -161,6 +201,5 @@ public class MyApp {
 
          */
       }
-
 
 }
