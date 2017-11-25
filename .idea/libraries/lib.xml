@@ -3,11 +3,15 @@
     <CLASSES>
       <root url="file://$PROJECT_DIR$/lib" />
     </CLASSES>
+<<<<<<< HEAD
     <JAVADOC>
       <root url="jar://$PROJECT_DIR$/lib/jgoodies-common-1.8.1-javadoc.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/jgoodies-binding-2.13.0-javadoc.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/jgoodies-validation-2.5.1-javadoc.jar!/" />
     </JAVADOC>
+=======
+    <JAVADOC />
+>>>>>>> 03c070584100bafd163f2b6d2ce7376dee78e502
     <SOURCES>
       <root url="file://$PROJECT_DIR$/lib" />
     </SOURCES>

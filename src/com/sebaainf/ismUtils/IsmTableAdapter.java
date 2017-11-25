@@ -38,7 +38,11 @@ public class IsmTableAdapter extends AbstractTableAdapter {
      * @param list
      * @param columnNames
      */
+<<<<<<< HEAD
     public IsmTableAdapter(java.util.List list, String[] columnNames) {
+=======
+    public IsmTableAdapter(List list, String[] columnNames) {
+>>>>>>> 03c070584100bafd163f2b6d2ce7376dee78e502
 
         super(new ArrayListModel((Collection) list), columnNames);
         this.columnNames = columnNames;

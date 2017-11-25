@@ -2,7 +2,11 @@ package com.sebaainf.ismUtils;
 
 import com.jgoodies.forms.internal.AbstractButtonPanelBuilder;
 import com.jgoodies.forms.layout.*;
+<<<<<<< HEAD
 import com.sebaainf.acteNaissFr.common.MyApp;
+=======
+import com.sebaainf.calculate.MyApp;
+>>>>>>> 03c070584100bafd163f2b6d2ce7376dee78e502
 
 import javax.swing.*;
 import javax.swing.border.Border;

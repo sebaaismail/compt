@@ -1,3 +1,7 @@
 Manifest-Version: 1.0
+<<<<<<< HEAD
 Main-Class: com.sebaainf.acteNaissFr.common.MyApp
+=======
+Main-Class: com.sebaainf.calculate.MyApp
+>>>>>>> 03c070584100bafd163f2b6d2ce7376dee78e502
 

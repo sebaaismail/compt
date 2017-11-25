@@ -1,7 +1,10 @@
 package com.sebaainf.ismUtils;
 
 import java.io.*;
+<<<<<<< HEAD
 import java.io.FileOutputStream;
+=======
+>>>>>>> 03c070584100bafd163f2b6d2ce7376dee78e502
 import java.text.SimpleDateFormat;
 import java.util.Date;
 

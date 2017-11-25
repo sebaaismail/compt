@@ -29,6 +29,7 @@
  */
 package com.sebaainf.ismUtils;
 
+<<<<<<< HEAD
 import static com.jgoodies.common.base.Preconditions.checkNotNull;
 
 import javax.swing.Action;
@@ -47,6 +48,19 @@ import com.sebaainf.acteNaissFr.common.MyApp;
 
 import java.awt.*;
 
+=======
+import com.jgoodies.forms.builder.AbstractButtonPanelBuilder;
+import com.jgoodies.forms.builder.ButtonBarBuilder;
+import com.jgoodies.forms.layout.*;
+import com.jgoodies.forms.util.LayoutStyle;
+import com.sebaainf.calculate.MyApp;
+
+import javax.swing.*;
+import java.awt.*;
+
+import static com.jgoodies.common.base.Preconditions.checkNotNull;
+
+>>>>>>> 03c070584100bafd163f2b6d2ce7376dee78e502
 /**
  * Builds consistent button bars that comply with popular style guides.
  * Utilizes the JGoodies {@link FormLayout} and honors the platform's

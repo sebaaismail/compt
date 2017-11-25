@@ -2,6 +2,7 @@ package com.sebaainf.ismUtils;
 
 import com.jgoodies.binding.PresentationModel;
 import com.jgoodies.binding.value.AbstractValueModel;
+<<<<<<< HEAD
 import com.jgoodies.binding.value.ValueHolder;
 import com.jgoodies.validation.ValidationResult;
 import com.jgoodies.validation.Validator;
@@ -10,6 +11,11 @@ import com.sebaainf.acteNaissFr.common.MyApp;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+=======
+import com.jgoodies.validation.ValidationResult;
+import com.jgoodies.validation.Validator;
+import com.sebaainf.calculate.MyApp;
+>>>>>>> 03c070584100bafd163f2b6d2ce7376dee78e502
 
 /**
  * Created by ${sebaainf.com} on 04/04/2015.
